@@ -16,7 +16,7 @@ target_include_directories( caffe_converter PRIVATE ${CMAKE_CURRENT_BINARY_DIR}
                                                ${CMAKE_CURRENT_SOURCE_DIR}/../../ )
 
 # Link with protobuf 
-target_link_libraries( caffe_converter ${PROTOBUF_LIBRARY} )
+target_link_libraries( caffe_converter ${PROTOBUF_LIBRARY} -lpthread )
 
 # Set C++11 mode 
 set_target_properties( caffe_converter PROPERTIES CXX_STANDARD 11 )
